@@ -6,11 +6,13 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 import UsesrContext from "../utils/UserContext";
 import Grocery from "./Grocery";
 import About from "./About";
+import { useSelector } from "react-redux";
 const Header = () => {
   const [btnChange, setBtnChange] = useState("login");
   const onlineStatus = useOnlineStatus();
-  const {loggedInUser} = useContext(UsesrContext);
-  
+  const { loggedInUser } = useContext(UsesrContext);
+
+  const cart = useSelector((store) => store.cart.items);
 
   return (
     <div className="flex justify-between  mx-5 shadow-2xl rounded-md">
@@ -29,7 +31,7 @@ const Header = () => {
           <li className="pr-4">
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li className="pr-4">Cart</li>
+          <li className="pr-4">Cart-{cart.length}</li>
 
           <li className="pr-4">
             {" "}
@@ -46,9 +48,7 @@ const Header = () => {
           >
             {btnChange}
           </button>
-          <li className="pr-4">
-            {loggedInUser}
-          </li>
+          <li className="pr-4">{loggedInUser}</li>
         </ul>
       </div>
     </div>

@@ -9,6 +9,8 @@ import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
 import { lazy, Suspense } from "react";
 import UsesrContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 const AppLayout = () => {
   const [userInfo, setUserInfo] = useState();
@@ -19,12 +21,16 @@ const AppLayout = () => {
     setUserInfo(data.name);
   }, []);
   return (
-    <UsesrContext.Provider value={{ loggedInUser: userInfo,setUserInfo,userInfo }}>
-      <div className="app">
-        <Header />
-        <Outlet />
-      </div>
-    </UsesrContext.Provider>
+    <Provider store={appStore}>
+      <UsesrContext.Provider
+        value={{ loggedInUser: userInfo, setUserInfo, userInfo }}
+      >
+        <div className="app">
+          <Header />
+          <Outlet />
+        </div>
+      </UsesrContext.Provider>
+    </Provider>
   );
 };
 
