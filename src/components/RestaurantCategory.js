@@ -24,7 +24,7 @@ const RestaurantCategory = (props) => {
           {data?.title} ({data.itemCards.length})
         </span>
         <span className="" onClick={handleClick}>
-          {showlist && collapse ? "⬆️" : "⬇️"}
+          {showlist && collapse ? "⬆️" : "⬇"}
         </span>
       </div>
       {showlist && collapse ? <ItemList items={data?.itemCards} /> : null}
