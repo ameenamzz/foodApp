@@ -12,14 +12,14 @@ const RestaurantCategory = (props) => {
   };
 
   return (
-    <div
-      className="w-6/12 mx-auto my-10 py-5 px-5 shadow-lg bg-gray-100 "
-      onClick={handleClick}
-    >
-      <div> 
+    <div className="w-6/12 mx-auto my-10 py-5 px-5 shadow-lg bg-gray-100 ">
+      <div>
         <h2></h2>
       </div>
-      <div className="flex justify-between cursor-pointer">
+      <div
+        className="flex justify-between cursor-pointer"
+        onClick={handleClick}
+      >
         <span className="font-bold text-lg ">
           {data?.title} ({data.itemCards.length})
         </span>
@@ -33,4 +33,3 @@ const RestaurantCategory = (props) => {
 };
 
 export default RestaurantCategory;
-

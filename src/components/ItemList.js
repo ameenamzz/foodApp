@@ -1,6 +1,14 @@
+import { useDispatch } from "react-redux";
 import { CDN_URL } from "../utils/constants";
+import { addItem } from "../utils/cartSlice";
 const ItemList = (props) => {
   const { items } = props;
+  const dispatch = useDispatch();
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
+
+  };
+
   return (
     <div>
       {items.map((list) => {
@@ -14,20 +22,25 @@ const ItemList = (props) => {
                 {list?.card?.info?.name}
               </span>
               <span className="font-semibold">
-                ₹ {list.card.info.price / 100}
+                ₹{" "}
+                {list?.card?.info?.price / 100 ||
+                  list?.card?.info?.defaultPrice / 100}
               </span>
-              <span>{list.card.info.ratings.aggregatedRating.rating}</span>
+              <span>{list.card?.info?.ratings?.aggregatedRating?.rating}</span>
               <span className="w-130 text-sm mt-6">
-                {list.card.info.description}
+                {list.card?.info?.description}
               </span>
             </div>
             <div className="">
               <img
                 className="w-45 ml-12 rounded-2xl"
-                src={CDN_URL + list.card.info.imageId}
+                src={CDN_URL + list.card?.info?.imageId}
                 alt=""
               ></img>
-              <button className="bg-white px-8 py-2 ml-10 text-green-600 font-bold rounded-xl border-1 border-gray-300 relative">
+              <button
+                className="bg-white px-8 py-2 ml-10 text-green-600 font-bold rounded-xl border-1 border-gray-300 relative cursor-pointer"
+                onClick={() => handleAddItem(list)}
+              >
                 ADD
               </button>
             </div>

@@ -13,7 +13,7 @@ const Header = () => {
   const { loggedInUser } = useContext(UsesrContext);
 
   const cart = useSelector((store) => store.cart.items);
-
+  console.log(cart);
   return (
     <div className="flex justify-between  mx-5 shadow-2xl rounded-md">
       <div className="logo-container">
@@ -31,7 +31,9 @@ const Header = () => {
           <li className="pr-4">
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li className="pr-4">Cart-{cart.length}</li>
+          <li className="pr-4">
+            <Link to="/cart"> Cart-{cart.length} </Link>
+          </li>
 
           <li className="pr-4">
             {" "}
