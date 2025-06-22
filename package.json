@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/ameenamzz/hello-react#readme",
   "devDependencies": {
-    "parcel": "^2.15.2"
+    "parcel": "^2.15.4"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
