@@ -18,6 +18,13 @@
   },
   "homepage": "https://github.com/ameenamzz/hello-react#readme",
   "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.3.0",
+    "babel-jest": "^30.0.2",
+    "jest": "^30.0.2",
+    "jest-environment-jsdom": "^30.0.2",
     "parcel": "^2.15.4"
   },
   "dependencies": {
