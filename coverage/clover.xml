@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1750764657215" clover="3.2.0">
-  <project timestamp="1750764657215" name="All files">
-    <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2" elements="6" coveredelements="6" complexity="0" loc="4" ncloc="4" packages="1" files="2" classes="2"/>
-    <file name="Contact.js" path="D:\amzzi\FULL STACK\JavaScript\hello-react\src\components\Contact.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="3" type="stmt"/>
-    </file>
-    <file name="sum.js" path="D:\amzzi\FULL STACK\JavaScript\hello-react\src\components\sum.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-    </file>
+<coverage generated="1750834837175" clover="3.2.0">
+  <project timestamp="1750834837175" name="All files">
+    <metrics statements="16" coveredstatements="14" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="4" elements="26" coveredelements="20" complexity="0" loc="16" ncloc="16" packages="2" files="3" classes="3"/>
+    <package name="components">
+      <metrics statements="15" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="4"/>
+      <file name="Header.js" path="D:\amzzi\FULL STACK\JavaScript\hello-react\src\components\Header.js">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="45" count="1" type="cond" truecount="1" falsecount="1"/>
+      </file>
+      <file name="RestaurantCard.js" path="D:\amzzi\FULL STACK\JavaScript\hello-react\src\components\RestaurantCard.js">
+        <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="appStore.js" path="D:\amzzi\FULL STACK\JavaScript\hello-react\src\utils\appStore.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

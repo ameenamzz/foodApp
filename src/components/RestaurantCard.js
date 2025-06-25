@@ -4,6 +4,7 @@ import UsesrContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
+
   const {
     name,
     cuisines,

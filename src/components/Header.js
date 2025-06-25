@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UsesrContext from "../utils/UserContext";
@@ -13,7 +12,7 @@ const Header = () => {
   const { loggedInUser } = useContext(UsesrContext);
 
   const cart = useSelector((store) => store.cart.items);
-  console.log(cart);
+  // console.log(cart);
   return (
     <div className="flex justify-between  mx-5 shadow-2xl rounded-md">
       <div className="logo-container">
