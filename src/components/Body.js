@@ -49,6 +49,7 @@ const Body = () => {
         <div className="">
           <input
             className=" lg:border-1 w-3xl "
+            data-testid="searchInput"
             type="text"
             placeholder="Search restaurents"
             value={searchText}
@@ -82,7 +83,7 @@ const Body = () => {
           className="bg-gray-300 px-4 rounded-lg hover:cursor-pointer hover:bg-gray-400"
           onClick={() => {
             const filterdList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4
+              (res) => res.info.avgRating > 4.5
             );
             setFilteredRestaurent(filterdList);
             // console.log(filterdList);
